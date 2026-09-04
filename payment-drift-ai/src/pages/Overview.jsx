@@ -26,7 +26,7 @@ export default function Overview() {
 
   const handleExportSummary = () => {
     const summary = [
-      '# Payment Drift AI summary',
+      '# DriftGuard summary',
       '',
       `- Dataset: ${dataset.name}`,
       `- Source: ${dataset.source_url}`,
@@ -76,7 +76,7 @@ export default function Overview() {
     <div className="space-y-6">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-xl font-medium">Payment Drift</h1>
+          <h1 className="text-xl font-medium">DriftGuard</h1>
           <p className="text-sm text-muted mt-1">Early warning for deteriorating payment behavior</p>
           <p className="text-xs text-muted mt-1">Real data · demo currency conversion · <Link to="/methodology" className="text-accent hover:underline">see Data & Methodology for details</Link></p>
         </div>

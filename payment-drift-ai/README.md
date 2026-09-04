@@ -1,6 +1,6 @@
-# Payment Drift AI
+# DriftGuard
 
-Payment Drift AI is a research prototype for identifying deteriorating repayment behavior from the UCI Default of Credit Card Clients dataset. Every number traces to a real public dataset and a real trained model — nothing is fabricated.
+DriftGuard is a research prototype for identifying deteriorating repayment behavior from the UCI Default of Credit Card Clients dataset. Every number traces to a real public dataset and a real trained model — nothing is fabricated.
 
 The dashboard presents precomputed real statistics, held-out logistic-regression validation, model-estimated revenue exposure, and simulated recovery actions. Monetary values are displayed in ₹ after a disclosed NT$ to INR conversion; this is not Razorpay merchant data.
 

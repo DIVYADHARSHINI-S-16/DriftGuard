@@ -46,7 +46,7 @@ export default function Methodology() {
         </ul>
       </Section>
 
-      <Section title="How Payment Drift is calculated">
+      <Section title="How DriftGuard is calculated">
         <p>
           The dataset records each client's monthly repayment status (PAY_0 through PAY_6) as a code:
           negative or zero means paid on time or ahead, positive integers mean that many months overdue.

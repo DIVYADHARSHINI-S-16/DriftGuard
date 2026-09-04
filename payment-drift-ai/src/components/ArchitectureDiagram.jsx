@@ -7,7 +7,7 @@ const stages = [
 
 export default function ArchitectureDiagram() {
   return (
-    <div className="bg-panel border border-border rounded-xl p-5" aria-label="Payment Drift AI data pipeline diagram">
+    <div className="bg-panel border border-border rounded-xl p-5" aria-label="DriftGuard data pipeline diagram">
       <p className="text-sm font-medium mb-4">Data pipeline</p>
       <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-3 lg:grid-cols-4">
         {stages.map((stage, index) => (

@@ -44,8 +44,8 @@ export default function App() {
     <BrowserRouter>
       {isBooting ? (
         <main className="min-h-screen bg-bg text-text flex flex-col items-center justify-center gap-4">
-          <h1 className="font-display text-4xl text-accent">Payment Drift AI</h1>
-          <div className="h-1.5 w-24 overflow-hidden rounded-full bg-accent-soft" aria-label="Loading Payment Drift AI">
+          <h1 className="font-display text-4xl text-accent">DriftGuard</h1>
+          <div className="h-1.5 w-24 overflow-hidden rounded-full bg-accent-soft" aria-label="Loading DriftGuard">
             <div className="h-full w-1/2 animate-pulse rounded-full bg-accent" />
           </div>
         </main>

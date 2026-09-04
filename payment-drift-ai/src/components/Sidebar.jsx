@@ -46,7 +46,7 @@ export default function Sidebar({ dark, setDark, demoMode, setDemoMode, onLogout
       { selector: 'main .bg-panel', title: 'Pipeline history', text: 'Each entry is labeled by pipeline sequence rather than implying live timestamps.', placement: 'left' },
     ],
     '/methodology': [
-      { selector: '[aria-label="Payment Drift AI data pipeline diagram"]', title: 'Data pipeline', text: 'See how the UCI dataset becomes realStats.json and feeds the dashboard pages.' },
+      { selector: '[aria-label="DriftGuard data pipeline diagram"]', title: 'Data pipeline', text: 'See how the UCI dataset becomes realStats.json and feeds the dashboard pages.' },
       { selector: 'main a[href*="archive.ics.uci.edu"]', title: 'Data source', text: 'Open the public UCI source documented for this prototype.' },
     ],
     '/settings': [
@@ -58,7 +58,7 @@ export default function Sidebar({ dark, setDark, demoMode, setDemoMode, onLogout
   return (
     <aside className="w-60 shrink-0 bg-panel border-r border-border flex flex-col h-screen sticky top-0 max-[1024px]:w-52">
       <div className="px-5 py-6">
-        <p className="font-display text-2xl leading-none text-accent">Payment Drift AI</p>
+        <p className="font-display text-2xl leading-none text-accent">DriftGuard</p>
       </div>
 
       <nav className="flex-1 px-3 space-y-1">

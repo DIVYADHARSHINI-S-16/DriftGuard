@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 from database import SessionLocal, seed_audit_events
 from models import AuditEvent, RecoveryAction, Session, User
 
-app = FastAPI(title="Payment Drift AI API")
+app = FastAPI(title="DriftGuard API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[os.getenv("CORS_ORIGIN", "http://127.0.0.1:5173")],
