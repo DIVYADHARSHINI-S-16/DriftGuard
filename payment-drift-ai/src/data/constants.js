@@ -1,0 +1,1 @@
+export const NTD_TO_INR_RATE = 0.39

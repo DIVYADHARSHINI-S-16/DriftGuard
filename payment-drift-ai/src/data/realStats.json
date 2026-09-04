@@ -1,0 +1,283 @@
+{
+  "dataset": {
+    "name": "Default of Credit Card Clients Dataset",
+    "publisher": "UCI Machine Learning Repository (I-Cheng Yeh, 2009)",
+    "source_url": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+    "doi": "https://doi.org/10.24432/C55S3H",
+    "license": "CC BY 4.0",
+    "n_records": 30000,
+    "n_fields": 29,
+    "period": "April 2005 - September 2005 (6 monthly repayment records) + October 2005 default outcome",
+    "region": "Taiwan",
+    "fields_used": [
+      "LIMIT_BAL",
+      "PAY_0..PAY_6 (repayment status)",
+      "BILL_AMT1..6",
+      "PAY_AMT1..6",
+      "AGE",
+      "default.payment.next.month"
+    ],
+    "limitations": [
+      "No explicit invoice due dates or literal 'days overdue' \u2014 repayment status is coded in discrete monthly delay buckets (0, 1, 2, ... months late), so we derive 'months overdue' rather than exact days.",
+      "No customer names, payment method, or subscription/recurring-billing metadata \u2014 those fields are not invented; they're simply absent from the UI.",
+      "No merchant/transaction-level granularity \u2014 this is account-level monthly billing data, not per-transaction event data.",
+      "Not Razorpay or India-specific; it's a 2005 Taiwan credit-card dataset used here as a public real-world proxy for repayment drift dynamics."
+    ]
+  },
+  "overall": {
+    "n_records": 30000,
+    "n_fields": 31,
+    "default_rate_pct": 22.12,
+    "avg_credit_limit": 167484.32,
+    "median_credit_limit": 140000.0,
+    "avg_age": 35.5
+  },
+  "bill_amount_stats": {
+    "mean": 44976.95,
+    "median": 19270.0,
+    "std": 66834.24,
+    "p25": 2400.0,
+    "p75": 57417.0,
+    "p95": 181532.5
+  },
+  "drift": {
+    "n_customers_drifting": 6257,
+    "n_customers_improving": 2737,
+    "n_customers_stable": 21006,
+    "pct_drifting": 20.9,
+    "population_avg_delay_months_early": 0.236,
+    "population_avg_delay_months_late": 0.327,
+    "population_drift_change_pct": 38.6,
+    "avg_delay_by_month": [
+      0.227,
+      0.222,
+      0.259,
+      0.304,
+      0.32,
+      0.357
+    ],
+    "months": [
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ]
+  },
+  "revenue_at_risk_model_estimated": 221893213.0,
+  "n_customers_at_risk": 5224,
+  "default_rate_drifting_pct": 42.16,
+  "default_rate_stable_or_improving_pct": 16.84,
+  "model_validation": {
+    "precision": 0.49,
+    "recall": 0.545,
+    "f1": 0.516,
+    "false_positive_rate": 0.161,
+    "false_negative_rate": 0.455,
+    "test_set_size": 7500,
+    "train_set_size": 22500
+  },
+  "top_customers_at_risk": [
+    {
+      "id": "C25870",
+      "creditLimit": 510000.0,
+      "currentBill": 477094.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C04337",
+      "creditLimit": 330000.0,
+      "currentBill": 377779.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C23040",
+      "creditLimit": 220000.0,
+      "currentBill": 246915.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C18868",
+      "creditLimit": 180000.0,
+      "currentBill": 197231.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C11555",
+      "creditLimit": 150000.0,
+      "currentBill": 161569.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C08998",
+      "creditLimit": 80000.0,
+      "currentBill": 126786.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C04388",
+      "creditLimit": 90000.0,
+      "currentBill": 112662.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C04445",
+      "creditLimit": 100000.0,
+      "currentBill": 110072.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C13262",
+      "creditLimit": 60000.0,
+      "currentBill": 69183.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C02917",
+      "creditLimit": 20000.0,
+      "currentBill": 43340.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C00750",
+      "creditLimit": 50000.0,
+      "currentBill": 37647.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C09980",
+      "creditLimit": 30000.0,
+      "currentBill": 35031.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C00982",
+      "creditLimit": 30000.0,
+      "currentBill": 34423.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C02363",
+      "creditLimit": 20000.0,
+      "currentBill": 24348.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C00832",
+      "creditLimit": 20000.0,
+      "currentBill": 24310.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C13636",
+      "creditLimit": 20000.0,
+      "currentBill": 24166.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C00650",
+      "creditLimit": 20000.0,
+      "currentBill": 21075.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": false
+    },
+    {
+      "id": "C13713",
+      "creditLimit": 20000.0,
+      "currentBill": 20753.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C06754",
+      "creditLimit": 20000.0,
+      "currentBill": 16942.0,
+      "monthsOverdueNow": 8,
+      "earlyAvgDelayMonths": 4.0,
+      "lateAvgDelayMonths": 7.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    },
+    {
+      "id": "C12967",
+      "creditLimit": 400000.0,
+      "currentBill": 405366.0,
+      "monthsOverdueNow": 7,
+      "earlyAvgDelayMonths": 3.0,
+      "lateAvgDelayMonths": 6.0,
+      "drift": 3.0,
+      "defaultedNextMonth": true
+    }
+  ]
+}
