@@ -10,9 +10,21 @@ from database import SessionLocal, seed_audit_events
 from models import AuditEvent, RecoveryAction, Session, User
 
 app = FastAPI(title="DriftGuard API")
+configured_origins = {
+    origin.strip()
+    for origin in os.getenv("CORS_ORIGIN", "").split(",")
+    if origin.strip()
+}
+configured_origins.update({
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:5174",
+    "http://localhost:5173",
+    "http://localhost:5174",
+})
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("CORS_ORIGIN", "http://127.0.0.1:5173")],
+    allow_origins=sorted(configured_origins),
+    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1):\d+$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

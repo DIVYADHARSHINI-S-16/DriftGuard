@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import TrustBadge from '../components/TrustBadge'
 
 export default function DemoLogin({ onEnter }) {
   const navigate = useNavigate()
@@ -27,10 +26,7 @@ export default function DemoLogin({ onEnter }) {
   }
 
   return (
-    <main className="login-page min-h-screen bg-bg text-text flex items-center justify-center p-6 relative">
-      <div className="absolute top-6 right-6">
-        <TrustBadge />
-      </div>
+    <main className="login-page h-screen overflow-hidden bg-bg text-text flex items-center justify-center p-6 relative">
       <div className="login-shell w-full max-w-5xl grid lg:grid-cols-[1.05fr_0.95fr] bg-panel border border-border rounded-2xl overflow-hidden shadow-sm">
         <section className="login-intro p-8 sm:p-12 flex flex-col justify-between min-h-[560px]">
           <div>
