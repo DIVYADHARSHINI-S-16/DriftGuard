@@ -41,7 +41,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/DriftGuard">
       {isBooting ? (
         <main className="min-h-screen bg-bg text-text flex flex-col items-center justify-center gap-4">
           <h1 className="font-display text-4xl text-accent">DriftGuard</h1>
